@@ -1,3 +1,2 @@
-vowels = ["a", "e", "o", "i", "u"]
-answer = dict.fromkeys(vowels, 0)
+answer = dict.fromkeys("aeiou", 0)
 print(answer)
