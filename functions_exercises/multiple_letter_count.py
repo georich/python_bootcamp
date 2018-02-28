@@ -1,4 +1,4 @@
 def multiple_letter_count(phrase):
-    return {phrase[i]: phrase.count(phrase[i]) for i in range(0, len(phrase))}
+    return {letter: phrase.count(letter) for letter in phrase}
 
 print(multiple_letter_count("awesome"))
