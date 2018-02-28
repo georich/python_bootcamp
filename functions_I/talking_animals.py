@@ -1,4 +1,5 @@
 def speak(animal = "dog"):
+    """Returns the noise a specified animal should make"""
     if animal == "pig":
         return "oink"
     elif animal == "duck":
@@ -11,3 +12,4 @@ def speak(animal = "dog"):
         return "?"
 
 print(speak())
+print(speak.__doc__)
