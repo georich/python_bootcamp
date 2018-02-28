@@ -1,5 +1,4 @@
 def contains_purple(*args):
-    for item in args:
-        if item == "purple":
-            return True
+    if "purple" in args:
+        return True
     return False
