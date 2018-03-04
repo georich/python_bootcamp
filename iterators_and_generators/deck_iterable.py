@@ -18,7 +18,9 @@ class Deck:
         return f"Deck of {self.count()} cards."
     
     def __iter__(self):
-        return iter(self.cards)
+        # return iter(self.cards)
+        for card in self.cards:
+            yield card
 
     def count(self):
         return len(self.cards)
