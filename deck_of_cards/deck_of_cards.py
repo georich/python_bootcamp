@@ -23,20 +23,20 @@ class Deck:
         # print(self.cards)
     
     def __repr__(self):
-        return f"Deck of {self.count()} cards"
+        return f"Deck of {self.count()} cards."
 
     def count(self):
         return len(self.cards)
     
     def _deal(self, cards_to_deal):
-        cards_dealt = []
-        for num in range(0, cards_to_deal):
-            # try:
-                cards_dealt.append(self.cards.pop())
-            # except IndexError:
-            #     raise ValueError("All cards have been dealt")
+        count = self.count()
+        actual_to_remove = min([count, cards_to_deal])
+        if count == 0:
+            raise ValueError("All cards have been dealt")
+        cards_dealt = self.cards[-actual_to_remove:]
+        self.cards = self.cards[:-actual_to_remove]
         return cards_dealt
-    
+            
     def shuffle(self):
         if len(self.cards) != 52:
             raise ValueError("Only full decks can be shuffled")
@@ -53,10 +53,11 @@ card1 = Card("A", "Spades")
 print(card1)
 deck1 = Deck()
 print(deck1.count())
-print(deck1)
-deck1._deal(52)
-#print(deck1._deal(4))
-print(deck1)
-# print(deck1.shuffle())
+# print(deck1)
+# deck1._deal(10)
+# print(deck1._deal(4))
+# print(deck1)
+deck1.shuffle()
 print(deck1.deal_card())
 print(deck1.deal_hand(5))
+print(deck1)
