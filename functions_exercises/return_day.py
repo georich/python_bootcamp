@@ -1,4 +1,12 @@
 def return_day(num):
+    """
+    >>> return_day(1)
+    'Sunday'
+    >>> return_day(7)
+    'Saturday'
+    >>> return_day(10) is None
+    True
+    """
     days = {
         1: "Sunday",
         2: "Monday",
