@@ -12,7 +12,7 @@ response = requests.get(
 
 data = response.json()
 
-jokes = len(data["results"])
+jokes = data["total_jokes"]
 if jokes > 1:
     print(f"I've got {jokes} jokes about {search_term}. Here's one:")
     print(choice(data["results"])["joke"])
