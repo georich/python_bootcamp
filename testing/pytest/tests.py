@@ -9,6 +9,11 @@ class TestEat:
     def test_eat_unhealthy(self):
         """indicate the user is eating whatever they want"""
         assert eat("pizza", is_healthy=False) == "I'm eating pizza, because I can!"
+    
+    def test_eat_healthy_boolean(self):
+        """check if the value for is_healthy is a boolean"""
+        with pytest.raises(ValueError):
+            eat("broccoli", is_healthy="definitely not a boolean")
 
 class TestNap:
     def test_short_nap(self):
