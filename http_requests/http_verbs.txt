@@ -1,0 +1,17 @@
+HTTP Verbs
+GET
+- retrieving data 
+- data passed in query string 
+- should have no side effects
+- can be cached
+- can be bookmarked
+POST 
+- writing data 
+- data passed in request body 
+- can have side effects
+- not cached
+- can't be bookmarked
+
+APIs
+- application programming interface
+- allows you to get data from another application w/o understanding how another application works
