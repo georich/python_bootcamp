@@ -12,10 +12,11 @@ response = requests.get(
 
 data = response.json()
 
-if len(data["results"]) > 1:
-    print(f"I've got {len(data['results'])} jokes about {search_term}. Here's one:")
+jokes = len(data["results"])
+if jokes > 1:
+    print(f"I've got {jokes} jokes about {search_term}. Here's one:")
     print(choice(data["results"])["joke"])
-elif len(data["results"]) == 1:
+elif jokes == 1:
     print(f"I've got one joke about {search_term}. Here it is:")
     print(data["results"][0]["joke"])
 else:
