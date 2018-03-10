@@ -9,5 +9,7 @@ def is_palindrome(word):
     >>> is_palindrome("abbaa")
     False
     """
+    if len(word) == 0:
+        return False
     reduced = word.lower().replace(" ", "")
     return reduced == reduced[::-1]
