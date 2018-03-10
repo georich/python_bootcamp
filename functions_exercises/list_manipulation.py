@@ -1,4 +1,10 @@
 def list_manipulation(li, command, location, value = None):
+    """
+    >>> list_manipulation([1,2,3], 'add', 'beginning', 20)
+    [20, 1, 2, 3]
+    >>> list_manipulation([1,2,3], 'remove', 'end')
+    3
+    """
     if command == "remove":
         if location == "end":
             return li.pop()
