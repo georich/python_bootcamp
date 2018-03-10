@@ -1,0 +1,34 @@
+1. DNS Lookup
+2. Computer makes a REQUEST to a server
+3. Server processes the REQUEST
+4. Server issues a RESPONSE
+
+2-4 is REQUEST/RESPONSE cycle
+
+
+DNS Lookup:
+Similar to a phonebook for the internet
+
+google.com -> DNS Server -> 172.217.9.142
+
+Requests and responses:
+
+Client  -> 172.217.9.142 (GET /) ->  Server
+Client  <-        200 OK         <-  Server
+
+HTTP Headers:
+Sent with both requests and responses.
+Provide additionnal info about requests/responses
+Request Headers:
+Accept (acceptable types eg. html, json, xml)
+Cache Control
+User-Agent
+Response Headers:
+Access-Control-Allow-Origin
+Allowed
+
+Response status codes:
+2xx success
+3xx redirect
+4xx client error
+5xx server error
