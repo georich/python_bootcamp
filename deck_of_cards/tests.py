@@ -24,3 +24,7 @@ class TestDeck:
     
     def test_repr(self, set_up_test_deck):
         assert repr(self.deck) == "Deck of 52 cards."
+
+    def test_count(self, set_up_test_deck):
+        assert self.deck.count() == 52
+        
