@@ -9,3 +9,6 @@ class TestCard:
     def test_init(self, set_up_test_card):
         assert self.test_card.suit == "Spades"
         assert self.test_card.value == "A"
+
+    def test_repr(self, set_up_test_card):
+        assert repr(self.test_card) == "A of Spades"
