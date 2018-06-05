@@ -1,7 +1,7 @@
 """Understanding the find() from bs4."""
 from bs4 import BeautifulSoup
 
-html = """
+HTML = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,15 +23,17 @@ html = """
 </html>
 """
 
-soup = BeautifulSoup(html, "html.parser")
-print(soup)
-print(type(soup))
-# print(soup.body.div)  # Gives first div found
-print(soup.find("div"))
-d = soup.find("div")
-print(type(d))
-d2 = soup.find_all("div")
+SOUP = BeautifulSoup(HTML, "html.parser")
+print(SOUP)
+print(type(SOUP))
+# print(SOUP.body.div)  # Gives first div found
+print(SOUP.find("div"))
+D = SOUP.find("div")
+print(type(D))
+D2 = SOUP.find_all("div")
 
-find_by_id = soup.find(id="first")
-find_all_class = soup.find_all(class_="special")
-find_all_by_attribute = soup.find_all(atts={"data-example": "yes"})
+FIND_BY_ID = SOUP.find(id="first")
+FIND_ALL_CLASS = SOUP.find_all(class_="special")
+FIND_ALL_BY_ATTRIBUTE = SOUP.find_all(atts={"data-example": "yes"})
+
+SELECT = SOUP.select("#first")  # Gives a list back
