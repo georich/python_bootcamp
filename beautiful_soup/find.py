@@ -36,4 +36,8 @@ FIND_BY_ID = SOUP.find(id="first")
 FIND_ALL_CLASS = SOUP.find_all(class_="special")
 FIND_ALL_BY_ATTRIBUTE = SOUP.find_all(atts={"data-example": "yes"})
 
-SELECT = SOUP.select("#first")  # Gives a list back
+SELECT = SOUP.select("#first")[0]  # Gives a list back
+
+EL = SOUP.select(".special")[0]
+print(EL.get_text())
+print(EL.name)
