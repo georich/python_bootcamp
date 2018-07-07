@@ -9,11 +9,11 @@ class User:
 
     def __repr__(self):
         return f"{self.first} is {self.age}"
-    
+
     @classmethod
     def display_active_user(cls):
         return f"There are currently {cls.active_users} active users"
-    
+
     @classmethod
     def from_string(cls, data_str):
         first, last, age = data_str.split(",")
@@ -24,13 +24,13 @@ class User:
 
     def initials(self):
         return f"{self.first[0]}.{self.last[0]}."
-    
+
     def likes(self, thing):
         return f"{self.first} likes {thing}"
-    
+
     def is_senior(self):
         return self.age >= 65
-    
+
     def birthday(self):
         self.age += 1
         return f"Happy {self.age}th, {self.first}"
@@ -42,11 +42,11 @@ class Moderator(User):
         super().__init__(first, last, age)
         self.community = community
         Moderator.total_mods += 1
-    
+
     @classmethod
     def display_total_mods(cls):
         return f"There are currently {cls.total_mods} total mods"
-    
+
     def remove_post(self):
         return f"{self.full_name()} removed a post from the {self.community} community"
 
